@@ -1,0 +1,229 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+.clearfix:after {
+				 clear: both;
+				 content: ".";
+				 display: block;
+				 height: 0;
+				 visibility: hidden;
+}
+#board {
+	display: inline-block;
+	height: 880px;
+	list-style-type: none;
+	position: relative;
+	width: 880px;
+	margin: 35px 100px 0;
+}
+#board .valid {
+	outline: 3px ridge blue;
+	z-index: 665;
+}
+#board .selected {
+	background-color: rgb(50,50,150);
+}
+#board .target {
+	outline: 3px ridge red;
+	z-index: 666;
+}
+#board .target:hover {
+	background-color: rgb(150,50,50);
+}
+#board > li {
+	float: left;
+	height: 110px;
+	position: relative;
+	width: 110px;
+    background-repeat: no-repeat;
+    background-opacity: 0.5 ;
+}
+#board > li > div {
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+}
+.black {
+	 background-color: #323232;
+ }
+.notblack {
+	background-color: #ececec;
+}
+.blacks {
+	background-image: url("./nChessB.png");
+}
+.notBlacks {
+	background-image: url("./nChessW.png");
+}
+.rook {
+	 background-position: -229px -55px;
+	 background-size: 685px auto;
+ }
+.knight {
+	background-position: -480px -55px;
+	background-size: 685px auto;
+}
+.bishop {
+	background-position: -245px -9px;
+	background-size: 500px auto;
+}
+.queen {
+	background-position: -61px -9px;
+	background-size: 500px auto;
+}
+.king {
+	background-position: 29px -9px;
+	background-size: 500px auto;
+}
+.pawn {
+	background-position: -604px -66px;
+	background-size: 685px auto;
+}
+#data > .rook {
+	background-position: -300px center;
+	background-size: 1050px auto;
+}
+#data > .knight {
+	background-position: -691px center;
+	background-size: 1050px auto;
+}
+#data > .bishop {
+	background-position: -493px center;
+	background-size: 1050px auto;
+}
+#data > .queen {
+	background-position: -109px center;
+	background-size: 1050px auto;
+}
+#data > .king {
+	background-position: 80px center;
+	background-size: 1050px auto;
+}
+#data > .pawn {
+	background-position: -873px center;
+	background-size: 1050px auto;
+}
+#info {
+	border: 2px solid black;
+	float: right;
+	padding: 10px 5px;
+	position: relative;
+	right: 100px;
+	width: 750px;
+}
+#info > p {
+	font-size: 25px;
+	text-align: center;
+	text-decoration: underline;
+	margin: 5px 0 0;
+}
+#info .notBlacksTurn {
+	background-color: black;
+	color: white;
+	text-decoration: none;
+}
+#info .blacksTurn {
+	background-color: white;
+	color: black;
+	text-decoration: none;
+}
+#info > ul {
+	border: 1px solid black;
+	height: 300px;
+	padding: 10px 5px;
+	margin: 0 10px;
+	list-style-type: none;
+}
+#info > ul:first-of-type {
+	position: absolute;
+	width: 715px;
+	visibility: visible;
+	font-size: 85px;
+	text-align: center;
+	line-height: 1.6;
+}
+#data > li {
+	font-size: 25px;
+	margin: 13px 5px;
+}
+#data > #avatar {
+	float: right;
+	height: 275px;
+	position: relative;
+	right: 30px;
+	width: 267px;
+	background-repeat: no-repeat;
+}
+#cemetery {
+	position: relative;
+	margin: 5px 0;
+}
+#cemetery > div {
+	border: 1px solid black;
+	height: 523px;
+	margin: 10px 20px 5px;
+	position: relative;
+	width: 312px;
+}
+#blacks {
+	float: left;
+	left: 5px;
+	position: relative;
+}
+#notBlacks {
+	float: right;
+	right: 5px;
+	position: relative;
+	background-color: black;
+}
+#cemetery > div > div{
+	background-repeat: no-repeat;
+	height: 120px;
+	width: 100px;
+	display: inline-block;
+	margin: -10px 0;
+}
+#over{
+	background-color: rgba(0, 0, 0, 0.6);
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+    visibility: hidden;
+}
+#over > div {
+	background-color: white;
+	height: 333px;
+	margin: 15% auto;
+	width: 500px;
+    position: relative;
+    text-align: center;
+}
+#over > div > p {
+    font-size: 30px;
+}
+#over .butt {
+    background-color: rgba(89, 150, 223, 0.86);
+    border: medium none;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px black;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    padding: 7px;
+    text-align: left;
+    font-size: 20px;
+}
+#over .butt:first-of-type {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+}
+#over .butt:last-of-type {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+}
